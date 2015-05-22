@@ -23,7 +23,6 @@ Quản trị categories
                         <th>Id</th>
                         <th>Username</th>
                         <th>Email</th>
-                        <th>Edit</th>
                         <th>Remove</th>
                     </tr>
                 </thead>
@@ -33,8 +32,14 @@ Quản trị categories
                         <td>{{$row->id}}</td>
                         <td>{{$row->username}}</td>
                         <td>{{$row->usermail}}</td>
-                        <td><button class="btn btn-primary">Edit</button> </td>
-                        <td><button class="btn btn-danger">Remove</button></td>
+                        <td>
+                        {{Form::open([
+                            'route' => ['users.destroy', $row->id],
+                            'method' => 'delete',
+                            'class' => ''
+                        ])}}
+                        <button class="btn btn-danger">Remove</button>
+                        {{Form::close()}}
                     </tr>
                     @endforeach
                 </tbody>

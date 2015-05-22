@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'ass_blog',
-			'username'  => 'root',
-			'password'  => '',
+			'database'  => 'ass_blog',//u774320163_blog
+			'username'  => 'root',//u774320163_admin
+			'password'  => '',//712411
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

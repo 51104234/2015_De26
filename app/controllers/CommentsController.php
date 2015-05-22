@@ -2,9 +2,6 @@
 
 class CommentsController extends BaseController {
 
-	public function __construct(){
-    	$this->beforeFilter('check-admin');
-	}
 
 	public function getIndex(){
 		$comments = Comment::paginate(4);

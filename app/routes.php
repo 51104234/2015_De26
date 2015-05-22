@@ -143,4 +143,8 @@ Route::group(array("prefix"=>"admin"),function(){
 	'as'	=> 'comments.destroy',
 	'uses'	=> 'CommentsController@destroy',
 	));
+	Route::delete('/users/{id}', array(
+	'as'	=> 'users.destroy',
+	'uses'	=> 'UserAccountsController@destroy',
+	));
 });
